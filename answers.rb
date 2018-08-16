@@ -9,13 +9,13 @@ class Answer
     puts 'What answer would you like to add?'
     ans = gets.strip
     
-  if @answer.include? @user_input
-    puts 'Already a possible answer.'
-  else
-    @working_arr = @answer.clone
-    @working_arr << @user_input
+    if @answer.include? @user_input
+      puts 'Already a possible answer.'
+    else
+      @working_arr = @answer.clone
+      @working_arr << @user_input
+    end
   end
-end
 
   def print_all_answers
     @working_arr.each {|answer| puts answer}
