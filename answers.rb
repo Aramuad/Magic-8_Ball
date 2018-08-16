@@ -9,20 +9,18 @@ class Answer
     puts 'What answer would you like to add?'
     ans = gets.strip
     
-  if @answers.include? @user_input
+  if @answer.include? @user_input
     puts 'Already a possible answer.'
   else
     @working_arr = @answer.clone
     @working_arr << @user_input
   end
+end
 
   def print_all_answers
     @working_arr.each {|answer| puts answer}
   end
-end
  
- class Reset
-  def initialize(answer_arr)
   def reset_answers(user_choice)
     if user_choice == 'Yes'
     @working_arr = @answer_arr
