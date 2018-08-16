@@ -1,19 +1,19 @@
 
 class Answer
+  attr_accessor :working_arr
   def initialize(answer_arr)
     @answer = answer_arr
-    @working_arr = []
+    @working_arr = @answer.clone
   end
 
   def add_answer
     puts 'What answer would you like to add?'
     ans = gets.strip
     
-    if @answer.include? @user_input
+    if @answer.include? ans
       puts 'Already a possible answer.'
     else
-      @working_arr = @answer.clone
-      @working_arr << @user_input
+      @working_arr << ans
     end
   end
 
@@ -21,9 +21,9 @@ class Answer
     @working_arr.each {|answer| puts answer}
   end
  
-  def reset_answers(user_choice)
-    if user_choice == 'Yes'
-    @working_arr = @answer_arr
-    end
+  def reset_answers
+   
+    @working_arr = @answer
+    
   end
 end

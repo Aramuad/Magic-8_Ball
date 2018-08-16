@@ -1,6 +1,6 @@
 require_relative "answers"
 
-answers = [ "As I see it, yes",
+@answers = [ "As I see it, yes",
 "Ask again later",
 "Better not tell you now",
 "Lets say, you just don't wanna know",
@@ -34,11 +34,11 @@ def show_menu(ans)
     when 'QUIT'
       puts "Thank you, and Goodbye, and Good luck"
       exit
-    when "add_answers"
-      ans.add_answers
-    when "reset_answers"
+    when "ADD"
+      ans.add_answer
+    when "RESET"
       ans.reset_answers
-    when "print_answers"
+    when "PRINT"
       ans.print_all_answers
     else
       puts ans.working_arr.sample  
@@ -46,5 +46,5 @@ def show_menu(ans)
   end
 end
 
-ansObj = Answer.new(answers)
+ansObj = Answer.new(@answers)
 show_menu(ansObj)
