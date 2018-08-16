@@ -15,5 +15,8 @@ class Answer
     @working_arr = @answer.clone
     @working_arr << @user_input
   end
-end
 
+  def print_all_answers
+    @working_arr.each {|answer| puts answer}
+  end
+end
