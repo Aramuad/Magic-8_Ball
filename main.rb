@@ -37,7 +37,7 @@ def show_menu(ans)
     when "reset_answers"
       ans.reset_answers
     when "print_answers"
-      ans.reset_answers
+      ans.print_all_answers
     else
       puts ans.working_arr.sample  
     end
