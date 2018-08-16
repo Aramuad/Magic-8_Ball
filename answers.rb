@@ -20,3 +20,12 @@ class Answer
     @working_arr.each {|answer| puts answer}
   end
 end
+ 
+ class Reset
+  def initialize(answer_arr)
+  def reset_answers(user_choice)
+    if user_choice == 'Yes'
+    @working_arr = @answer_arr
+    end
+  end
+end
