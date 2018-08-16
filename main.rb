@@ -1,3 +1,5 @@
+require_relative "answers"
+
 answers = [ "As I see it, yes",
 "Ask again later",
 "Better not tell you now",
